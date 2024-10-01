@@ -8,7 +8,7 @@
     "dev": "set NODE_ENV=development&&webpack",
     "watch": "webpack --mode development --watch",
     "start": "set NODE_ENV=development&&webpack serve",
-    "deploy": "npm run build&&gh-pages -d dist"
+    "deploy": "gh-pages -d dist"
   },
   "browserslist": [
     "last 2 versions",
