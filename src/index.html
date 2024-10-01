@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>3.1.4</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+  </head>
+  <body>
+    <header class="header container">
+      <button
+        class="header__action-button header__action-button--separate header__action-button--separate-right action-button"
+      >
+        <div class="action-button__icon">
+          <img
+            class="action-button__img"
+            src="./images/icons/menu.svg"
+            alt="menu"
+          />
+        </div>
+      </button>
+
+      <a href="#" class="header__logo logo">
+        <img class="logo__img" src="./images/logo.svg" alt="Лого CPS" />
+      </a>
+
+      <ul class="header__buttons header__buttons--min-tablet">
+        <li class="header__buttons-button">
+          <button
+            class="header__action-button header__action-button--min-tablet action-button"
+          >
+            <div class="action-button__icon">
+              <img
+                class="action-button__img"
+                src="./images/icons/phone.svg"
+                alt="Позвонить"
+              />
+            </div>
+          </button>
+        </li>
+        <li class="header__buttons-button">
+          <button
+            class="header__action-button header__action-button--min-tablet action-button"
+          >
+            <div class="action-button__icon">
+              <img
+                class="action-button__img"
+                src="./images/icons/message.svg"
+                alt="Написать"
+              />
+            </div>
+          </button>
+        </li>
+        <li class="header__buttons-button">
+          <button
+            class="header__action-button header__action-button--min-tablet action-button"
+          >
+            <div class="action-button__icon">
+              <img
+                class="action-button__img"
+                src="./images/icons/contact.svg"
+                alt="Контакты"
+              />
+            </div>
+          </button>
+        </li>
+      </ul>
+
+      <ul class="header__buttons">
+        <li class="header__buttons-button">
+          <button
+            class="header__action-button header__action-button--separate header__action-button--separate-left action-button"
+          >
+            <div class="action-button__icon">
+              <img
+                class="action-button__img"
+                src="./images/icons/tech.svg"
+                alt="Оставить заявку"
+              />
+            </div>
+          </button>
+        </li>
+        <li class="header__buttons-button">
+          <button class="header__action-button action-button">
+            <div class="action-button__icon">
+              <img
+                class="action-button__img"
+                src="./images/icons/search.svg"
+                alt="Статус ремонта"
+              />
+            </div>
+          </button>
+        </li>
+      </ul>
+    </header>
+
+    <main class="main">
+      <div class="main__top">
+        <h1 class="main__page-title page-title">Услуги и сервисы</h1>
+
+        <ul class="main__top-buttons">
+          <li class="main__top-button">
+            <button class="main__action-button action-button">
+              <span class="action-button__text">Оставить заявку</span>
+              <div class="action-button__icon">
+                <img
+                  class="action-button__img"
+                  src="./images/icons/tech.svg"
+                  alt="Оставить заявку"
+                />
+              </div>
+            </button>
+          </li>
+          <li class="main__top-button">
+            <button class="main__action-button action-button">
+              <span class="action-button__text">Статус ремонта</span>
+              <div class="action-button__icon">
+                <img
+                  class="action-button__img"
+                  src="./images/icons/search.svg"
+                  alt="Статус ремонта"
+                />
+              </div>
+            </button>
+          </li>
+        </ul>
+      </div>
+
+      <nav class="page-menu container">
+        <ul class="page-menu__list">
+          <li class="page-menu__item">
+            <a href="#brends" class="page-menu__link page-menu__link--active"
+              >Ремонтируемые бренды</a
+            >
+          </li>
+          <li class="page-menu__item">
+            <a href="#devices" class="page-menu__link">
+              Ремонтируемые устройства
+            </a>
+          </li>
+          <li class="page-menu__item">
+            <a href="#additional-services" class="page-menu__link">
+              Дополнительные услуги
+            </a>
+          </li>
+          <li class="page-menu__item">
+            <a href="#prices" class="page-menu__link">Цены на услуги</a>
+          </li>
+          <li class="page-menu__item">
+            <a href="#addresses" class="page-menu__link">
+              Адреса сервисных центров
+            </a>
+          </li>
+          <li class="page-menu__item">
+            <a href="#prices" class="page-menu__link">Специальные цены</a>
+          </li>
+          <li class="page-menu__item">
+            <a href="#reviews" class="page-menu__link">Отзывы</a>
+          </li>
+        </ul>
+      </nav>
+
+      <section class="about">
+        <h2 class="section-title visually-hidden">О нас</h2>
+
+        <div class="about__item about__item--first">
+          <p class="about__p">
+            Мы являемся авторизованным сервисным центром по ремонту техники
+            Dell. Только у нас вы можете отремонтировать свой ноутбук Dell с
+            официальной гарантией производителя.
+          </p>
+          <br />
+          <p class="about__p">
+            Мы успешно работаем с 1992 года и заслужили репутацию надежного
+            партнера
+            <span>
+              , что подтверждает большое количество постоянных клиентов. Мы
+              гордимся тем, что к нам обращаются по рекомендациям и, в свою
+              очередь, советуют нас родным и близким.
+            </span>
+          </p>
+
+          <button class="about__show-more-button show-more-button">
+            <img
+              src="./images/icons/two-arrows-down.svg"
+              alt=""
+              class="show-more-button__img"
+            />
+            Читать далее
+          </button>
+        </div>
+
+        <picture class="about__item">
+          <source
+            srcset="images/cps-on-wall-1120.jpg"
+            type="image/jpg"
+            media="(min-width: 1120px)"
+          />
+          <source
+            srcset="images/cps-on-wall-768.jpg"
+            type="image/jpg"
+            media="(min-width: 768px)"
+          />
+          <source
+            srcset="images/cps-on-wall.jpg"
+            type="image/jpg"
+            media="(max-width: 767px)"
+          />
+          <img
+            src="./images/cps-on-wall.jpg"
+            alt="CPS вывеска на стене"
+            class="about__img about__item"
+          />
+        </picture>
+      </section>
+
+      <section class="brands-section section">
+        <h2 class="section-title">Ремонт техники различных брендов</h2>
+
+        <div class="swiper">
+          <ul class="swiper__wrapper swiper-wrapper">
+            <li class="swiper__slide swiper-slide">
+              <img
+                src="./images/brands/lenovo.svg"
+                alt="lenovo logo"
+                class="swiper__img"
+                width="108"
+                height="32"
+              />
+              <a href="#" class="action-button" target="_blank" tabindex="-1">
+                <div
+                  class="action-button__icon action-button__icon--arrow-to-right action-button__icon--outline"
+                ></div>
+              </a>
+            </li>
+
+            <li class="swiper__slide swiper-slide">
+              <img
+                src="./images/brands/samsung.svg"
+                alt="samsung logo"
+                class="swiper__img"
+                width="116"
+                height="38"
+              />
+              <a href="#" class="action-button" target="_blank" tabindex="-1">
+                <div
+                  class="action-button__icon action-button__icon--arrow-to-right action-button__icon--outline"
+                ></div>
+              </a>
+            </li>
+
+            <li class="swiper__slide swiper-slide">
+              <img
+                src="./images/brands/apple.svg"
+                alt="apple logo"
+                class="swiper__img"
+                width="44"
+                height="44"
+              />
+              <a href="#" class="action-button" target="_blank" tabindex="-1">
+                <div
+                  class="action-button__icon action-button__icon--arrow-to-right action-button__icon--outline"
+                ></div>
+              </a>
+            </li>
+
+            <li class="swiper__slide swiper-slide">
+              <img
+                src="./images/brands/view-sonic.svg"
+                alt="viewsonic logo"
+                class="swiper__img"
+                width="128"
+                height="21"
+              />
+              <a href="#" class="action-button" target="_blank" tabindex="-1">
+                <div
+                  class="action-button__icon action-button__icon--arrow-to-right action-button__icon--outline"
+                ></div>
+              </a>
+            </li>
+
+            <li class="swiper__slide swiper-slide">
+              <img
+                src="./images/brands/bosch.svg"
+                alt="bosch logo"
+                class="swiper__img"
+                width="128"
+                height="28"
+              />
+              <a href="#" class="action-button" target="_blank" tabindex="-1">
+                <div
+                  class="action-button__icon action-button__icon--arrow-to-right action-button__icon--outline"
+                ></div>
+              </a>
+            </li>
+
+            <li class="swiper__slide swiper-slide">
+              <img
+                src="./images/brands/hp.svg"
+                alt="hp logo"
+                class="swiper__img"
+                width="52"
+                height="52"
+              />
+              <a href="#" class="action-button" target="_blank" tabindex="-1">
+                <div
+                  class="action-button__icon action-button__icon--arrow-to-right action-button__icon--outline"
+                ></div>
+              </a>
+            </li>
+
+            <li class="swiper__slide swiper-slide">
+              <img
+                src="./images/brands/acer.svg"
+                alt="acer logo"
+                class="swiper__img"
+                width="94"
+                height="24"
+              />
+              <a href="#" class="action-button" target="_blank" tabindex="-1">
+                <div
+                  class="action-button__icon action-button__icon--arrow-to-right action-button__icon--outline"
+                ></div>
+              </a>
+            </li>
+
+            <li class="swiper__slide swiper-slide">
+              <img
+                src="./images/brands/sony.svg"
+                alt="sony logo"
+                class="swiper__img"
+                width="128"
+                height="25"
+              />
+              <a href="#" class="action-button" target="_blank" tabindex="-1">
+                <div
+                  class="action-button__icon action-button__icon--arrow-to-right action-button__icon--outline"
+                ></div>
+              </a>
+            </li>
+
+            <li class="swiper__slide swiper-slide">
+              <img
+                src="./images/brands/lenovo.svg"
+                alt="lenovo logo"
+                class="swiper__img"
+                width="108"
+                height="32"
+              />
+              <a href="#" class="action-button" target="_blank" tabindex="-1">
+                <div
+                  class="action-button__icon action-button__icon--arrow-to-right action-button__icon--outline"
+                ></div>
+              </a>
+            </li>
+
+            <li class="swiper__slide swiper-slide">
+              <img
+                src="./images/brands/samsung.svg"
+                alt="samsung logo"
+                class="swiper__img"
+                width="116"
+                height="38"
+              />
+              <a href="#" class="action-button" target="_blank" tabindex="-1">
+                <div
+                  class="action-button__icon action-button__icon--arrow-to-right action-button__icon--outline"
+                ></div>
+              </a>
+            </li>
+          </ul>
+
+          <div class="swiper__pagination swiper-pagination"></div>
+        </div>
+
+        <button class="brands-section__show-more-button show-more-button">
+          <img
+            src="./images/icons/two-arrows-down.svg"
+            alt=""
+            class="show-more-button__img"
+          />
+          <span class="show-more-button__text">Показать все</span>
+        </button>
+      </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  </body>
+</html>

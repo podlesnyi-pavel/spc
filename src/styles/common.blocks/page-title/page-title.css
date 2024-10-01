@@ -1,0 +1,31 @@
+.page-title {
+  display: flex;
+  margin: 0;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 40px;
+  letter-spacing: -0.6px;
+}
+
+.page-title::before {
+  content: '';
+  display: inline-block;
+  width: 4px;
+  min-height: 100%;
+  margin-right: 12px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  background-color: #41f6d7;
+}
+
+@media (min-width: 768px) {
+  .page-title::before {
+    margin-right: 20px;
+  }
+}
+
+@media (min-width: 1120px) {
+  .page-title::before {
+    margin-right: 30px;
+  }
+}

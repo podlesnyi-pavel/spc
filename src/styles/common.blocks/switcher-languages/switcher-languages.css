@@ -1,0 +1,29 @@
+.switcher-languages {
+  display: flex;
+  gap: 7px;
+  margin: 0;
+  margin-top: 8px;
+  padding: 0;
+  font-size: 1.6rem;
+  list-style-type: none;
+}
+
+@media (min-width: 768px) {
+  .switcher-languages {
+    margin-top: 40px;
+  }
+}
+
+.switcher-languages__button {
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  font-size: inherit;
+  text-transform: uppercase;
+  color: inherit;
+  cursor: pointer;
+}
+
+.switcher-languages__button--active {
+  color: #7e7e82;
+}

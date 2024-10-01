@@ -1,0 +1,32 @@
+.show-more-button {
+  display: flex;
+  align-items: center;
+  padding: 0;
+  border: none;
+  border-bottom: 2px solid transparent;
+  background-color: transparent;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.2px;
+  color: inherit;
+  outline-offset: 4px;
+  cursor: pointer;
+  transition: border-bottom 0.3s;
+}
+
+.show-more-button:hover,
+.show-more-button:active {
+  border-bottom: 2px solid #b8ffec;
+}
+
+.show-more-button--active .show-more-button__img {
+  transform: rotate(180deg);
+}
+
+.show-more-button__img {
+  width: 8px;
+  height: 11px;
+  margin-right: 12px;
+  transition: transform 0.3s;
+}

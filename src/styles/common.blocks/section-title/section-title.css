@@ -1,0 +1,24 @@
+.section-title {
+  margin: 0;
+  padding: 16px;
+  background-color: #fff;
+  background: #fff linear-gradient(to right, #f8f8f8, #fff);
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 24px;
+  letter-spacing: -0.2px;
+  color: #7e7e82;
+  text-transform: uppercase;
+}
+
+@media (min-width: 768px) {
+  .section-title {
+    padding: 16px 24px;
+  }
+}
+
+@media (min-width: 1120px) {
+  .section-title {
+    padding: 16px 32px;
+  }
+}

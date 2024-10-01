@@ -1,0 +1,99 @@
+.action-button {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.2px;
+  color: inherit;
+  outline: none;
+  cursor: pointer;
+}
+
+.action-button__text {
+  margin-right: 8px;
+  border-bottom: 2px solid transparent;
+  transition: border-bottom 0.3s;
+}
+
+.action-button:hover .action-button__text,
+.action-button:focus .action-button__text,
+.action-button:active .action-button__text {
+  border-bottom: 2px solid #b8ffec;
+}
+
+.action-button__icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #ff3e79;
+  outline: none;
+  transition: filter 0.3s;
+}
+
+.action-button__icon--outline {
+  background-color: transparent;
+  border: 2px solid #ff3e79;
+}
+
+.action-button:hover .action-button__icon,
+.action-button:focus .action-button__icon,
+.action-button:active .action-button__icon {
+  filter: grayscale(50%);
+}
+
+.action-button__img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* types images */
+.action-button__icon--close {
+  position: relative;
+}
+
+.action-button__icon--close::before,
+.action-button__icon--close::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 20px;
+  width: 2px;
+  background-color: #fff;
+}
+.action-button__icon--close::before {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.action-button__icon--close::after {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.action-button__icon--search {
+  background: #ff3e79 url('../../../images/icons/search.svg') no-repeat center;
+}
+
+.action-button__icon--phone {
+  background: #ff3e79 url('../../../images/icons/phone.svg') no-repeat center;
+}
+
+.action-button__icon--message {
+  background: #ff3e79 url('../../../images/icons/message.svg') no-repeat center;
+}
+
+.action-button__icon--contact {
+  background: #ff3e79 url('../../../images/icons/contact.svg') no-repeat center;
+}
+
+.action-button__icon--arrow-to-right {
+  background: url('../../../images/icons/arrow-to-right-.svg') no-repeat 55%
+    center;
+}
+/* types images */
