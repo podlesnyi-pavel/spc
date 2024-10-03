@@ -7,7 +7,7 @@
     "build": "set NODE_ENV=production&&webpack",
     "dev": "set NODE_ENV=development&&webpack",
     "watch": "webpack --mode development --watch",
-    "start": "set NODE_ENV=development&&webpack serve",
+    "start": "set NODE_ENV=development&&npm run dev&&webpack serve",
     "deploy": "gh-pages -d dist"
   },
   "browserslist": [
@@ -35,6 +35,7 @@
     "postcss": "^8.4.47",
     "postcss-loader": "^8.1.1",
     "postcss-preset-env": "^10.0.5",
+    "prettier": "3.3.3",
     "sass": "^1.79.4",
     "sass-loader": "^16.0.2",
     "webpack": "^5.95.0",

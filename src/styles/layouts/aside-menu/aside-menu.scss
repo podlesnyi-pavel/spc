@@ -1,0 +1,155 @@
+.aside-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100vw;
+  height: 100vh;
+  font-weight: 500;
+  font-size: 1.6rem;
+  letter-spacing: -0.01em;
+  line-height: 150%;
+  transform: translateX(-100%);
+  transition: transform 0.3s linear;
+  backdrop-filter: blur(5px);
+
+  @media (min-width: $laptop-size) {
+    position: static;
+    grid-row: 1/3;
+    width: 320px;
+    height: 100%;
+    transform: none;
+  }
+
+  &--open {
+    transform: translateX(0);
+  }
+
+  &__inner {
+    width: 100%;
+    height: 100%;
+    background-color: $white;
+    overflow-y: auto;
+    box-shadow: 16px 0 52px #0e185033;
+    -ms-overflow-style: none; /* edge */
+    scrollbar-width: none; /* firefox */
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    @media (min-width: $tablet-size) {
+      width: 320px;
+    }
+
+    @media (min-width: $laptop-size) {
+      box-shadow: none;
+    }
+  }
+
+  &__in-inner {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    max-height: 887px;
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    min-height: 88px;
+    padding: 18px 16px;
+
+    @media (min-width: 360px) {
+      padding: 16px 24px;
+    }
+
+    > .action-button:first-of-type {
+      margin-right: 16px;
+    }
+  }
+
+  &__close-button {
+    @media (min-width: $laptop-size) {
+      display: none;
+    }
+  }
+
+  &__logo {
+    margin-right: auto;
+  }
+
+  &__nav-list {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+  }
+
+  &__nav-link {
+    display: flex;
+    align-items: center;
+    padding: 12px 24px;
+    color: inherit;
+    outline: none;
+    transition: background-color 0.3s;
+
+    @media (min-width: $tablet-size) {
+      padding: 16px 24px;
+    }
+
+    &:hover:not(.aside-menu__nav-link--active),
+    &:focus:not(.aside-menu__nav-link--active),
+    &:active:not(.aside-menu__nav-link--active) {
+      background-color: rgba($color: $btn-link-active, $alpha: 0.3);
+    }
+
+    &--active {
+      color: $secondary-text-color;
+
+      &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        width: 4px;
+        height: 32px;
+        margin-right: 20px;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+        background-color: $left-decor;
+      }
+    }
+  }
+
+  &__footer {
+    display: flex;
+    flex-direction: column;
+    margin-top: auto;
+    padding: 20px 24px 32px;
+  }
+
+  &__buttons {
+    display: flex;
+    gap: 16px;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+  }
+
+  &__contacts {
+    margin-top: 16px;
+    font-style: normal;
+  }
+
+  &__email,
+  &__phone {
+    display: block;
+    color: inherit;
+    font-style: inherit;
+  }
+
+  &__phone {
+    margin-top: 12px;
+    font-weight: 700;
+    font-size: 2.4rem;
+  }
+}

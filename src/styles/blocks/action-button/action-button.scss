@@ -1,0 +1,102 @@
+.action-button {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.2px;
+  color: inherit;
+  outline: none;
+  cursor: pointer;
+
+  &__text {
+    margin-right: 8px;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom 0.3s;
+  }
+
+  &:hover .action-button__text,
+  &:focus .action-button__text,
+  &:active .action-button__text {
+    border-bottom: 2px solid $btn-link-active;
+  }
+
+  &:hover .action-button__icon,
+  &:focus .action-button__icon,
+  &:active .action-button__icon {
+    filter: grayscale(50%);
+  }
+
+  &__icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: $main-action;
+    outline: none;
+    transition: filter 0.3s;
+
+    &--outline {
+      background-color: transparent;
+      border: 2px solid $main-action;
+    }
+
+    &--close {
+      position: relative;
+
+      &::before,
+      &::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        height: 20px;
+        width: 2px;
+        background-color: $white;
+      }
+
+      &::before {
+        transform: translate(-50%, -50%) rotate(45deg);
+      }
+
+      &::after {
+        transform: translate(-50%, -50%) rotate(-45deg);
+      }
+    }
+
+    &--search-list {
+      background: $main-action url('@images/icons/search-list.svg') no-repeat
+        center;
+    }
+
+    &--search {
+      background: $main-action url('@images/icons/search.svg') no-repeat center;
+    }
+
+    &--phone {
+      background: $main-action url('@images/icons/phone.svg') no-repeat center;
+    }
+
+    &--message {
+      background: $main-action url('@images/icons/message.svg') no-repeat center;
+    }
+
+    &--contact {
+      background: $main-action url('@images/icons/contact.svg') no-repeat center;
+    }
+
+    &--arrow-to-right {
+      background: url('@images/icons/arrow-to-right.svg') no-repeat 55% center;
+    }
+  }
+
+  &__img {
+    max-width: 100%;
+    height: auto;
+  }
+}

@@ -1,0 +1,55 @@
+.page-menu {
+  &__list {
+    display: flex;
+    margin: 0;
+    margin-top: 24px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    list-style-type: none;
+    overflow-x: scroll;
+
+    -ms-overflow-style: none; /* edge */
+    scrollbar-width: none; /* firefox */
+
+    @include section-gorizontal-padding;
+
+    /* webkit (chrome) */
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    @media (min-width: $laptop-size) {
+      flex-wrap: wrap;
+      overflow-x: hidden;
+    }
+  }
+
+  &__item {
+    flex-shrink: 0;
+  }
+
+  &__link {
+    display: inline-block;
+    padding: 8px 16px;
+    border: 2px solid transparent;
+    color: $secondary-text-color;
+    outline: none;
+
+    @media (min-width: $laptop-size) {
+      padding: 8px 22px;
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+      border-bottom: 2px solid $btn-link-active;
+    }
+
+    &--active {
+      border: 2px solid $btn-link-active;
+      border-radius: 5px;
+    }
+  }
+}

@@ -1,0 +1,14 @@
+@mixin section-gorizontal-padding {
+  padding-left: map-get($section-gorizontal-padding, $mobile-name);
+  padding-right: map-get($section-gorizontal-padding, $mobile-name);
+
+  @media (min-width: $tablet-size) {
+    padding-left: map-get($section-gorizontal-padding, $tablet-name);
+    padding-right: map-get($section-gorizontal-padding, $tablet-name);
+  }
+
+  @media (min-width: $laptop-size) {
+    padding-left: map-get($section-gorizontal-padding, $laptop-size);
+    padding-right: map-get($section-gorizontal-padding, $laptop-name);
+  }
+}

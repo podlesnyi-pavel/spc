@@ -1,0 +1,29 @@
+.main {
+  padding-top: 24px;
+  background-color: $main-bgc;
+
+  &__top {
+    display: flex;
+    align-items: center;
+    padding-right: 34px;
+  }
+
+  &__page-title {
+    margin-right: auto;
+  }
+
+  &__top-buttons {
+    display: none;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+
+    @media (min-width: $laptop-size) {
+      display: flex;
+    }
+  }
+
+  &__top-button + .main__top-button {
+    margin-left: 32px;
+  }
+}

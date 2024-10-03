@@ -1,0 +1,85 @@
+.about {
+  padding: 24px 0 35px;
+
+  @media (min-width: $tablet-size) {
+    display: flex;
+    padding: 32px 0 40px;
+  }
+
+  @media (min-width: $laptop-size) {
+    padding: 32px 0 50px;
+  }
+
+  &__item {
+    @media (min-width: $tablet-size) {
+      width: 50%;
+    }
+
+    &--first {
+      padding: 0 map-get($section-gorizontal-padding, $mobile-name);
+
+      @media (min-width: $tablet-size) {
+        padding: 0 18px 0 map-get($section-gorizontal-padding, $tablet-name);
+      }
+
+      @media (min-width: $laptop-size) {
+        padding: 0 18px 0 map-get($section-gorizontal-padding, $laptop-name);
+      }
+    }
+
+    &--second {
+      display: inline-block;
+      width: 100%;
+      margin-top: 16px;
+
+      @media (min-width: $tablet-size) {
+        width: 50%;
+        margin-top: 0;
+        padding: 0 24px 0 18px;
+      }
+
+      @media (min-width: $laptop-size) {
+        padding: 0 32px 0 18px;
+      }
+    }
+  }
+
+  &__p {
+    margin: 0;
+
+    &:nth-of-type(2) {
+      display: none;
+
+      @media (min-width: $tablet-size) {
+        display: block;
+      }
+    }
+
+    span {
+      display: none;
+
+      @media (min-width: $laptop-size) {
+        display: block;
+      }
+    }
+  }
+
+  &__show-more-button {
+    margin-top: 16px;
+  }
+
+  &__img {
+    width: 100%;
+    height: 176px;
+
+    object-fit: cover;
+
+    @media (min-width: $tablet-size) {
+      height: 208px;
+    }
+
+    @media (min-width: $laptop-size) {
+      height: 307px;
+    }
+  }
+}

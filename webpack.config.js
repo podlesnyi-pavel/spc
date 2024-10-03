@@ -25,6 +25,11 @@ module.exports = {
     filename: '[name].[contenthash].js',
     clean: true,
   },
+  resolve: {
+    alias: {
+      '@images': path.resolve(__dirname, 'src/images'),
+    },
+  },
   plugins: [
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, 'src/index.html'),

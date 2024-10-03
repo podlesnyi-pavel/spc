@@ -13,20 +13,20 @@
   outline-offset: 4px;
   cursor: pointer;
   transition: border-bottom 0.3s;
-}
 
-.show-more-button:hover,
-.show-more-button:active {
-  border-bottom: 2px solid #b8ffec;
-}
+  &:hover,
+  &:active {
+    border-bottom: 2px solid $btn-link-active;
+  }
 
-.show-more-button--active .show-more-button__img {
-  transform: rotate(180deg);
-}
+  &--active .show-more-button__img {
+    transform: rotate(180deg);
+  }
 
-.show-more-button__img {
-  width: 8px;
-  height: 11px;
-  margin-right: 12px;
-  transition: transform 0.3s;
+  &__img {
+    width: 8px;
+    height: 11px;
+    margin-right: 12px;
+    transition: transform 0.3s;
+  }
 }
