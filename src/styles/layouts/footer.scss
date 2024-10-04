@@ -1,0 +1,40 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  background-color: $main-bgc;
+  font-weight: 500;
+  line-height: 16px;
+  letter-spacing: 0;
+  text-align: center;
+  color: $secondary-text-color;
+  opacity: 0.72;
+
+  @include section-gorizontal-padding;
+
+  @media (min-width: $tablet-size) {
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 32px;
+    padding-bottom: 20px;
+    text-align: start;
+  }
+
+  &__item {
+    flex-basis: 33%;
+
+    &:not(:first-child) {
+      margin-top: 16px;
+
+      @media (min-width: $tablet-size) {
+        margin-top: 0;
+      }
+    }
+
+    &:last-child {
+      @media (min-width: $tablet-size) {
+        text-align: end;
+      }
+    }
+  }
+}
