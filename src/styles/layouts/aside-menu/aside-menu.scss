@@ -9,20 +9,24 @@
   font-size: 1.6rem;
   letter-spacing: -0.01em;
   line-height: 150%;
-  transform: translateX(-100%);
-  transition: transform 0.3s linear;
   backdrop-filter: blur(5px);
+  visibility: hidden;
+  transition: visibility 0.3s linear;
 
   @media (min-width: $laptop-size) {
     position: static;
     grid-row: 1/3;
     width: 320px;
     height: 100%;
-    transform: none;
+    visibility: visible;
   }
 
   &--open {
-    transform: translateX(0);
+    visibility: visible;
+
+    .aside-menu__inner {
+      transform: translateX(0);
+    }
   }
 
   &__inner {
@@ -31,6 +35,8 @@
     background-color: $white;
     overflow-y: auto;
     box-shadow: 16px 0 52px #0e185033;
+    transform: translateX(-100%);
+    transition: transform 0.3s linear;
     -ms-overflow-style: none; /* edge */
     scrollbar-width: none; /* firefox */
 
@@ -44,6 +50,7 @@
 
     @media (min-width: $laptop-size) {
       box-shadow: none;
+      transform: translateX(0);
     }
   }
 
