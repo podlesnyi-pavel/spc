@@ -8,7 +8,7 @@
   }
 
   @media (min-width: $laptop-size) {
-    padding-left: map-get($section-gorizontal-padding, $laptop-size);
+    padding-left: map-get($section-gorizontal-padding, $laptop-name);
     padding-right: map-get($section-gorizontal-padding, $laptop-name);
   }
 }

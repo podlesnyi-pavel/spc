@@ -23,6 +23,26 @@
     transform: rotate(180deg);
   }
 
+  &--section {
+    display: none;
+    transition:
+      margin-top $show-more-btn-brands-transition-duration linear,
+      border-bottom 0.3s;
+
+    @media (min-width: $tablet-size) {
+      display: flex;
+      margin: 0 24px;
+    }
+
+    @media (min-width: $laptop-size) {
+      margin: 0 32px;
+    }
+
+    &--active {
+      margin-top: 22px;
+    }
+  }
+
   &__img {
     width: 8px;
     height: 11px;

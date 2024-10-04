@@ -34,9 +34,6 @@ $pagination-bullet--active: #b5b6bc;
     }
 
     &--show-all {
-      /* max-height: none; */
-      /* высчитывать в js стилях в зависимости от ширины экрана и находить все слайды */
-      max-height: 350px;
       transition: max-height $show-more-btn-brands-transition-duration linear;
     }
   }
@@ -54,6 +51,22 @@ $pagination-bullet--active: #b5b6bc;
     @media (min-width: $tablet-size) {
       width: auto;
     }
+
+    &--technique {
+      align-items: flex-start;
+      height: 160px;
+    }
+  }
+
+  &__slide-title {
+    font-weight: 500;
+    font-size: 1.6rem;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+  }
+
+  &__slide-button {
+    align-self: flex-end;
   }
 }
 

@@ -33,23 +33,42 @@ asideMenuCloseButton.addEventListener('click', function () {
   setAriaHidden(asideMenu, true);
 });
 
-const swiperWrapper = document.querySelector('.swiper__wrapper');
-const brandsButton = document.querySelector(
-  '.brands-section__show-more-button',
+// show-more-buttons with sliders =========================
+const swiperWrappers = document.querySelectorAll('.swiper__wrapper');
+
+const showMoreButtonsSection = document.querySelectorAll(
+  '.show-more-button--section',
 );
-const textBrandsButton = brandsButton.querySelector('.show-more-button__text');
 
-brandsButton.addEventListener('click', function () {
-  swiperWrapper.classList.toggle('swiper__wrapper--show-all');
+const textShowMoreButtonsSection = document.querySelectorAll(
+  '.show-more-button__text',
+);
 
-  brandsButton.classList.toggle(
-    'show-more-button--active',
-    'brands-section__show-more-button--active',
-  );
+for (let i = 0; i < showMoreButtonsSection.length; i++) {
+  showMoreButtonsSection[i].addEventListener('click', function () {
+    swiperWrappers[i].classList.toggle('swiper__wrapper--show-all');
 
-  if (swiperWrapper.classList.contains('swiper__wrapper--show-all')) {
-    textBrandsButton.textContent = 'Скрыть';
-  } else {
-    textBrandsButton.textContent = 'Показать все';
-  }
-});
+    showMoreButtonsSection[i].classList.toggle(
+      'show-more-button--active',
+      'show-more-button--section--active',
+    );
+
+    if (swiperWrappers[i].classList.contains('swiper__wrapper--show-all')) {
+      textShowMoreButtonsSection[i].textContent = 'Скрыть';
+
+      const screenWidth = window.innerWidth;
+      const children = swiperWrappers[i].children;
+      const slidehHight = children[0].offsetHeight;
+      const gap = 16;
+      const elementByLine = screenWidth >= 1440 ? 4 : 3;
+      const lines = Math.ceil(children.length / elementByLine);
+      const swiperWrapperHeight = lines * slidehHight + lines * gap - gap;
+
+      swiperWrappers[i].style.maxHeight = `${swiperWrapperHeight}px`;
+    } else {
+      textShowMoreButtonsSection[i].textContent = 'Показать все';
+      swiperWrappers[i].style.removeProperty('max-height');
+    }
+  });
+}
+// ========================================================
