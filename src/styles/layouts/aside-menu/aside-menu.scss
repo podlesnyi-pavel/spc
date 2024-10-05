@@ -149,9 +149,17 @@
 
   &__email,
   &__phone {
-    display: block;
+    display: inline-block;
     color: inherit;
     font-style: inherit;
+    border-bottom: 1px solid transparent;
+    transition: border-bottom 0.3s;
+
+    &:hover,
+    &:focus,
+    &:active {
+      border-bottom: 1px solid $btn-link-active;
+    }
   }
 
   &__phone {

@@ -1,0 +1,52 @@
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100vw;
+  visibility: hidden;
+  backdrop-filter: blur(5px);
+  transition: visibility 0.3s linear;
+
+  &--open {
+    visibility: visible;
+
+    .modal__inner {
+      transform: translateX(0);
+    }
+  }
+
+  &__inner {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    margin-left: auto;
+    padding-top: 88px;
+    box-shadow:
+      -2px 0 4px 0 $section-divider,
+      -16px 0 52px 0 rgba($color: $secondary-text-color, $alpha: 0.2);
+    background-color: $white;
+    transform: translateX(100%);
+    transition: transform 0.3s linear;
+
+    @media (min-width: $tablet-size) {
+      width: 440px;
+      padding-top: 32px;
+    }
+  }
+
+  &__close-btn {
+    position: absolute;
+    top: 24px;
+    left: map-get($section-gorizontal-padding, $mobile-name);
+
+    @media (min-width: $tablet-size) {
+      left: -(map-get($section-gorizontal-padding, $tablet-name));
+      transform: translateX(-100%);
+    }
+  }
+
+  &__page-title {
+    margin-top: 8px;
+  }
+}

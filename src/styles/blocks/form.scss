@@ -1,0 +1,46 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  row-gap: 16px;
+  padding: 24px;
+
+  @include section-gorizontal-padding;
+
+  &--modal {
+    display: none;
+
+    &--is-show {
+      display: flex;
+    }
+  }
+
+  &__field {
+    padding: 12px 16px;
+    border: 1px solid $field-border;
+    border-radius: 8px;
+    resize: none;
+
+    &::placeholder {
+      color: $placeholder-color;
+    }
+
+    &--message {
+      min-height: 118px;
+    }
+  }
+
+  &__text {
+    font-weight: 500;
+    line-height: 16px;
+    letter-spacing: 0;
+    color: $secondary-text-color;
+  }
+
+  &__link {
+    color: $main-action;
+  }
+
+  &__submit-btn {
+    align-self: flex-end;
+  }
+}

@@ -34,7 +34,11 @@
             <button
               class="header__action-button header__action-button--min-tablet action-button"
             >
-              <div class="action-button__icon">
+              <div
+                data-type-modal="call-order"
+                data-modal-title="Заказать звонок"
+                class="action-button__icon"
+              >
                 <img
                   class="action-button__img"
                   src="./images/icons/phone.svg"
@@ -45,6 +49,8 @@
           </li>
           <li class="header__buttons-button">
             <button
+              data-type-modal="feedback"
+              data-modal-title="Обратная связь"
               class="header__action-button header__action-button--min-tablet action-button"
             >
               <div class="action-button__icon">
@@ -147,9 +153,9 @@
                   <a href="#" class="aside-menu__nav-link">Производителям</a>
                 </li>
                 <li class="aside-menu__nav-item">
-                  <a href="#" class="aside-menu__nav-link"
-                    >Наши сервисные центры</a
-                  >
+                  <a href="#" class="aside-menu__nav-link">
+                    Наши сервисные центры
+                  </a>
                 </li>
                 <li class="aside-menu__nav-item">
                   <a href="#" class="aside-menu__nav-link">Контакты</a>
@@ -163,12 +169,16 @@
                   <button class="aside-menu__action-button action-button">
                     <div
                       class="action-button__icon action-button__icon--phone"
+                      data-type-modal="call-order"
+                      data-modal-title="Заказать звонок"
                     ></div>
                   </button>
                 </li>
                 <li class="aside-menu__buttons-button">
                   <button class="aside-menu__action-button action-button">
                     <div
+                      data-type-modal="feedback"
+                      data-modal-title="Обратная связь"
                       class="action-button__icon action-button__icon--message"
                     ></div>
                   </button>
@@ -246,9 +256,7 @@
         <nav class="page-menu">
           <ul class="page-menu__list">
             <li class="page-menu__item">
-              <a href="#brends" class="page-menu__link page-menu__link--active"
-                >Ремонтируемые бренды</a
-              >
+              <a href="#brends" class="page-menu__link">Ремонтируемые бренды</a>
             </li>
             <li class="page-menu__item">
               <a href="#devices" class="page-menu__link">
@@ -331,7 +339,7 @@
           </picture>
         </section>
 
-        <section class="brands-section section">
+        <section id="brends" class="brands-section section">
           <h2 class="section-title">Ремонт техники различных брендов</h2>
 
           <div class="swiper">
@@ -500,7 +508,7 @@
           </button>
         </section>
 
-        <section class="technique-section section">
+        <section id="devices" class="technique-section section">
           <h2 class="section-title">Ремонт различных видов техники</h2>
 
           <div class="swiper">
@@ -654,7 +662,7 @@
           </button>
         </section>
 
-        <section class="price-section section">
+        <section id="prices" class="price-section section">
           <h2 class="section-title">цены на услуги</h2>
 
           <!-- swiper -->
@@ -693,6 +701,102 @@
           офертой
         </span>
       </footer>
+
+      <aside class="modal">
+        <div class="modal__inner">
+          <button class="modal__close-btn action-button">
+            <div class="action-button__icon action-button__icon--close"></div>
+          </button>
+
+          <h2 class="modal__page-title page-title page-title--md">
+            Обратная связь
+          </h2>
+
+          <form
+            action="#"
+            method="POST"
+            class="form form--modal form--feedback"
+          >
+            <input
+              class="form__field"
+              type="text"
+              placeholder="Имя"
+              name="name"
+              required
+            />
+            <input
+              class="form__field"
+              type="tel"
+              placeholder="Телефон"
+              name="phone"
+              required
+            />
+            <input
+              class="form__field"
+              type="email"
+              placeholder="Электронная почта"
+              name="mail"
+              required
+            />
+
+            <textarea
+              class="form__field form__field--message"
+              name="message"
+              placeholder="Сообщение"
+            ></textarea>
+
+            <span class="form__text">
+              Нажимая “отправить”, вы даете согласие на
+              <a class="form__link" href="#">обработку персональных данных</a>
+              и соглашаетесь с нашей
+              <a class="form__link" href="#">политикой конфиденциальности</a>
+            </span>
+
+            <button
+              type="submit"
+              class="form__submit-btn action-button action-button--filled"
+            >
+              <span class="action-button__text">отправить</span>
+              <div
+                class="action-button__icon action-button__icon--arrow-to-right--white"
+              >
+              </div>
+            </button>
+          </form>
+
+          <form
+            action="#"
+            method="POST"
+            class="form form--modal form--call-order"
+          >
+            <input
+              class="form__field"
+              type="tel"
+              placeholder="Телефон"
+              name="phone"
+              required
+            />
+
+            <span class="form__text">
+              Нажимая “отправить”, вы даете согласие на
+              <a class="form__link" href="#">обработку персональных данных</a>
+              и соглашаетесь с нашей
+              <a class="form__link" href="#">политикой конфиденциальности</a>
+            </span>
+
+            <button
+              type="submit"
+              class="form__submit-btn action-button action-button--filled"
+            >
+              <span class="action-button__text">отправить</span>
+              <div
+                class="action-button__icon action-button__icon--arrow-to-right--white"
+              >
+              </div>
+            </button>
+          </form>
+        </div>
+      </aside>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>

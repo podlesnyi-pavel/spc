@@ -15,8 +15,10 @@
 @import './blocks/switcher-languages/switcher-languages';
 @import './blocks/section-title/section-title';
 @import './blocks/page-menu/page-menu';
+@import './blocks/form';
 
 @import '../components/swiper/swiper';
+@import '../components/modal/modal';
 
 @import './layouts/header/header';
 @import './layouts/aside-menu/aside-menu';
@@ -32,6 +34,7 @@ html {
   line-height: 18px;
   letter-spacing: 0.2px;
   color: $main-text-color;
+  scroll-behavior: smooth;
 
   @media (min-width: $tablet-size) {
     line-height: 20px;
@@ -42,6 +45,7 @@ html {
   font-size: 1.4rem;
 
   &__inner {
+    position: relative;
     max-width: $desktop-size;
     margin: 0 auto;
 

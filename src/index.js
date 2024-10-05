@@ -3,6 +3,7 @@
 import './index.html';
 import './styles/main.scss';
 import './components/swiper/swiper';
+import './components/modal/modal';
 
 console.log('Hello!');
 
@@ -12,25 +13,12 @@ const asideMenuCloseButton = document.querySelector(
   '.aside-menu__close-button',
 );
 
-function setAriaHidden(elem, bool) {
-  elem.ariaHidden = bool;
-}
-
-document.addEventListener('DOMContentLoaded', function () {
-  const desctopWidth = 1120;
-  if (window.innerWidth < desctopWidth) {
-    setAriaHidden(asideMenu, true);
-  }
-});
-
 burgerMenu.addEventListener('click', function () {
   asideMenu.classList.add('aside-menu--open');
-  setAriaHidden(asideMenu, false);
 });
 
 asideMenuCloseButton.addEventListener('click', function () {
   asideMenu.classList.remove('aside-menu--open');
-  setAriaHidden(asideMenu, true);
 });
 
 // show-more-buttons with sliders =========================

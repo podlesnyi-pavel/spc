@@ -34,8 +34,10 @@
     display: inline-block;
     padding: 8px 16px;
     border: 2px solid transparent;
+    border-radius: 5px;
     color: $secondary-text-color;
     outline: none;
+    transition: border 0.3s;
 
     @media (min-width: $laptop-size) {
       padding: 8px 22px;
@@ -44,12 +46,7 @@
     &:hover,
     &:focus,
     &:active {
-      border-bottom: 2px solid $btn-link-active;
-    }
-
-    &--active {
       border: 2px solid $btn-link-active;
-      border-radius: 5px;
     }
   }
 }
