@@ -24,6 +24,14 @@
       color: $placeholder-color;
     }
 
+    &:valid:not(:empty) {
+      border: 1px solid $sucess;
+    }
+
+    &:invalid {
+      border: 1px solid $error;
+    }
+
     &--message {
       min-height: 118px;
     }
@@ -38,6 +46,12 @@
 
   &__link {
     color: $main-action;
+
+    &:hover,
+    &:focus,
+    &:active {
+      text-decoration: underline;
+    }
   }
 
   &__submit-btn {
