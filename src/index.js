@@ -7,6 +7,8 @@ import './components/modal/modal';
 
 console.log('Hello!');
 
+import { modal } from './components/modal/modal';
+
 const burgerMenu = document.getElementById('header__burger-menu');
 const asideMenu = document.querySelector('.aside-menu');
 const asideMenuCloseButton = document.querySelector(
@@ -60,3 +62,12 @@ for (let i = 0; i < showMoreButtonsSection.length; i++) {
   });
 }
 // ========================================================
+
+const formsModal = modal.querySelectorAll('.form--modal');
+
+for (const form of formsModal) {
+  form.addEventListener('submit', function (event) {
+    event.preventDefault();
+    form.reset();
+  });
+}

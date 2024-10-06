@@ -12,6 +12,14 @@ $pagination-bullet--active: #b5b6bc;
     padding: 24px map-get($section-gorizontal-padding, $laptop-name);
   }
 
+  &--price {
+    padding: 16px 0 44px 8px;
+
+    @media (min-width: $tablet-size) {
+      display: none;
+    }
+  }
+
   &__wrapper {
     margin: 0;
     padding: 0;
@@ -56,6 +64,34 @@ $pagination-bullet--active: #b5b6bc;
       align-items: flex-start;
       height: 160px;
     }
+
+    &--price {
+      display: grid;
+      grid-template-columns: 1fr 119px;
+      // flex-direction: column;
+      align-items: flex-start;
+      width: 260px;
+      height: 200px;
+    }
+  }
+
+  &__slide-item {
+    &--price {
+      grid-column: 1/3;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin: 0;
+    }
+
+    &--price-time {
+      grid-column: 1/2;
+    }
+
+    &--price-button {
+      grid-column: 2/3;
+      align-self: center;
+    }
   }
 
   &__slide-title {
@@ -63,6 +99,14 @@ $pagination-bullet--active: #b5b6bc;
     font-size: 1.6rem;
     line-height: 24px;
     letter-spacing: -0.2px;
+  }
+
+  &__subtitle {
+    margin-bottom: 4px;
+    font-weight: 500;
+    line-height: 16px;
+    letter-spacing: 0;
+    color: $secondary-text-color;
   }
 
   &__slide-button {

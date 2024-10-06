@@ -26,9 +26,9 @@
 
   &--filled {
     justify-content: center;
-    min-width: 136px;
+    width: 119px;
     min-height: 32px;
-    padding: 0 16px;
+    padding: 0 12px;
     border-radius: 16px;
     background-color: $main-action;
     font-weight: 700;
@@ -38,11 +38,22 @@
     text-align: center;
     color: $white;
     text-transform: uppercase;
+    transition: filter 0.3s;
 
-    &:hover .action-button__text,
-    &:focus .action-button__text,
-    &:active .action-button__text {
-      border-bottom: none;
+    &:hover,
+    &:focus,
+    &:active {
+      filter: grayscale(50%);
+
+      .action-button__text,
+      .action-button__text,
+      .action-button__text {
+        border-bottom: none;
+      }
+    }
+
+    &--lg {
+      width: 136px;
     }
 
     .action-button__text {

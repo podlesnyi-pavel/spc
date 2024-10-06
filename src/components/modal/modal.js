@@ -1,5 +1,5 @@
-const callButtons = document.querySelectorAll('[data-type-modal]');
-const modal = document.querySelector('.modal');
+const shodModalButtons = document.querySelectorAll('[data-type-modal]');
+export const modal = document.querySelector('.modal');
 const modalCloseButton = modal.querySelector('.modal__close-btn');
 const modalTitle = modal.querySelector('.modal__page-title');
 
@@ -10,7 +10,7 @@ function closeModal() {
 
 let currentFormModal;
 
-for (const button of callButtons) {
+for (const button of shodModalButtons) {
   button.addEventListener('click', function () {
     function showFormByType(typeForm) {
       currentFormModal = modal.querySelector(`.form--${typeForm}`);
