@@ -40,10 +40,10 @@
   &__close-btn {
     position: absolute;
     top: 24px;
-    left: map-get($section-gorizontal-padding, $mobile-name);
+    left: map-get($section-horizontal-padding, $mobile-name);
 
     @media (min-width: $tablet-size) {
-      left: -(map-get($section-gorizontal-padding, $tablet-name));
+      left: -(map-get($section-horizontal-padding, $tablet-name));
       transform: translateX(-100%);
     }
   }

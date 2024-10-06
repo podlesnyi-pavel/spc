@@ -1,11 +1,62 @@
 .price-section {
   &__table {
-    width: 100%;
-    margin: 0 16px;
+    display: none;
+    width: calc(100% - map-get($section-horizontal-padding, $tablet-name) * 2);
+    margin: 16px map-get($section-horizontal-padding, $tablet-name);
+    border-radius: 6px;
+    text-align: left;
+    background-color: $white;
+    border-collapse: collapse;
+    border-spacing: 15px;
+
+    @media (min-width: $tablet-size) {
+      display: table;
+    }
+
+    @media (min-width: $laptop-size) {
+      width: calc(
+        100% - map-get($section-horizontal-padding, $laptop-name) * 2
+      );
+      margin: 16px map-get($section-horizontal-padding, $laptop-name);
+    }
+  }
+
+  &__th,
+  &__td {
+    padding: 16px 0 16px 16px;
+
+    &:last-child {
+      padding-right: 16px;
+    }
+  }
+
+  &__th {
+    background-color: $main-bgc;
+    font-weight: 500;
+    line-height: 16px;
+    letter-spacing: 0;
+    color: $secondary-text-color;
+  }
+
+  &__td {
+    border-bottom: 1px solid $field-border;
+    line-height: 18px;
+
+    .action-button {
+      margin-left: auto;
+    }
   }
 
   &__bottom {
-    @include section-gorizontal-padding;
+    @include section-horizontal-padding;
+
+    @media (min-width: $tablet-size) {
+      margin-top: 24px;
+    }
+
+    @media (min-width: $laptop-size) {
+      margin-top: 32px;
+    }
   }
 
   &__text {

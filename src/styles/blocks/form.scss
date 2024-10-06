@@ -4,7 +4,7 @@
   row-gap: 16px;
   padding: 24px;
 
-  @include section-gorizontal-padding;
+  @include section-horizontal-padding;
 
   &--modal {
     display: none;

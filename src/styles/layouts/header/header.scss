@@ -5,7 +5,7 @@
   padding: 16px;
   border-bottom: 1px solid $section-divider;
 
-  @include section-gorizontal-padding;
+  @include section-horizontal-padding;
 
   @media (min-width: $laptop-size) {
     display: none;

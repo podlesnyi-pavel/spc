@@ -3,9 +3,15 @@ export const modal = document.querySelector('.modal');
 const modalCloseButton = modal.querySelector('.modal__close-btn');
 const modalTitle = modal.querySelector('.modal__page-title');
 
+import { closeAsideMenu } from '~/index.js';
+
 function closeModal() {
   modal.classList.remove('modal--open');
-  currentFormModal.classList.remove('form--modal--is-show');
+
+  // сделал так пока чтоб не ломалось при закрытии aside-menu на esc
+  if (currentFormModal) {
+    currentFormModal.classList.remove('form--modal--is-show');
+  }
 }
 
 let currentFormModal;
@@ -16,6 +22,8 @@ for (const button of shodModalButtons) {
       currentFormModal = modal.querySelector(`.form--${typeForm}`);
       currentFormModal.classList.add('form--modal--is-show');
     }
+
+    closeAsideMenu();
 
     function setModalTitle(title) {
       modalTitle.textContent = title;

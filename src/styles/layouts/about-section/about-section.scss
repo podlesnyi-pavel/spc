@@ -16,14 +16,14 @@
     }
 
     &--first {
-      padding: 0 map-get($section-gorizontal-padding, $mobile-name);
+      padding: 0 map-get($section-horizontal-padding, $mobile-name);
 
       @media (min-width: $tablet-size) {
-        padding: 0 18px 0 map-get($section-gorizontal-padding, $tablet-name);
+        padding: 0 18px 0 map-get($section-horizontal-padding, $tablet-name);
       }
 
       @media (min-width: $laptop-size) {
-        padding: 0 18px 0 map-get($section-gorizontal-padding, $laptop-name);
+        padding: 0 18px 0 map-get($section-horizontal-padding, $laptop-name);
       }
     }
 

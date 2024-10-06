@@ -28,6 +28,7 @@ module.exports = {
   resolve: {
     alias: {
       '@images': path.resolve(__dirname, 'src/images'),
+      '~': path.resolve(__dirname, 'src'),
     },
   },
   plugins: [

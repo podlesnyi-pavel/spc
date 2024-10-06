@@ -10,7 +10,7 @@
   color: $secondary-text-color;
   opacity: 0.72;
 
-  @include section-gorizontal-padding;
+  @include section-horizontal-padding;
 
   @media (min-width: $tablet-size) {
     flex-direction: row;

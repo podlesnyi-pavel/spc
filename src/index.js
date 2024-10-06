@@ -15,15 +15,32 @@ const asideMenuCloseButton = document.querySelector(
   '.aside-menu__close-button',
 );
 
+export function closeAsideMenu() {
+  asideMenu.classList.remove('aside-menu--open');
+}
+
 burgerMenu.addEventListener('click', function () {
   asideMenu.classList.add('aside-menu--open');
 });
 
 asideMenuCloseButton.addEventListener('click', function () {
-  asideMenu.classList.remove('aside-menu--open');
+  closeAsideMenu();
+});
+
+asideMenu.addEventListener('click', function (event) {
+  if (event.target.classList.contains('aside-menu')) {
+    closeAsideMenu();
+  }
+});
+
+document.addEventListener('keydown', function (event) {
+  if (event.key === 'Escape') {
+    closeAsideMenu();
+  }
 });
 
 // show-more-buttons with sliders =========================
+// если появится 4й слайдер с кнопкой showMoreButton должно все сломаться, не сразу увидел 3й слайдер без кнопки
 const swiperWrappers = document.querySelectorAll('.swiper__wrapper');
 
 const showMoreButtonsSection = document.querySelectorAll(
@@ -37,9 +54,9 @@ const textShowMoreButtonsSection = document.querySelectorAll(
 for (let i = 0; i < showMoreButtonsSection.length; i++) {
   showMoreButtonsSection[i].addEventListener('click', function () {
     swiperWrappers[i].classList.toggle('swiper__wrapper--show-all');
+    showMoreButtonsSection[i].classList.toggle('show-more-button--active');
 
     showMoreButtonsSection[i].classList.toggle(
-      'show-more-button--active',
       'show-more-button--section--active',
     );
 

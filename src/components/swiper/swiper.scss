@@ -2,14 +2,14 @@ $pagination-bullet: #979797;
 $pagination-bullet--active: #b5b6bc;
 
 .swiper {
-  padding: 16px 0 52px map-get($section-gorizontal-padding, $mobile-name);
+  padding: 16px 0 52px map-get($section-horizontal-padding, $mobile-name);
 
   @media (min-width: $tablet-size) {
-    padding: map-get($section-gorizontal-padding, $tablet-name);
+    padding: map-get($section-horizontal-padding, $tablet-name);
   }
 
   @media (min-width: $laptop-size) {
-    padding: 24px map-get($section-gorizontal-padding, $laptop-name);
+    padding: 24px map-get($section-horizontal-padding, $laptop-name);
   }
 
   &--price {
@@ -116,6 +116,10 @@ $pagination-bullet--active: #b5b6bc;
 
 .swiper-horizontal > .swiper__pagination {
   bottom: 24px;
+}
+
+.swiper-horizontal > .swiper__pagination--price {
+  bottom: 12px;
 }
 
 .swiper-pagination-bullet {
