@@ -4,9 +4,11 @@ const modalCloseButton = modal.querySelector('.modal__close-btn');
 const modalTitle = modal.querySelector('.modal__page-title');
 
 import { closeAsideMenu } from '~/index.js';
+import { body } from '~/index.js';
 
 function closeModal() {
   modal.classList.remove('modal--open');
+  body.classList.remove('body--no-scroll');
 
   // сделал так пока чтоб не ломалось при закрытии aside-menu на esc
   if (currentFormModal) {
@@ -30,6 +32,7 @@ for (const button of shodModalButtons) {
     }
 
     modal.classList.add('modal--open');
+    body.classList.add('body--no-scroll');
 
     switch (button.dataset.typeModal) {
       case 'call-order':

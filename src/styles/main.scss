@@ -54,4 +54,8 @@ html {
       grid-template-columns: 320px 1fr;
     }
   }
+
+  &--no-scroll {
+    overflow-y: hidden;
+  }
 }

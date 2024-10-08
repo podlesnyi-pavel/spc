@@ -5,10 +5,9 @@ import './styles/main.scss';
 import './components/swiper/swiper';
 import './components/modal/modal';
 
-console.log('Hello!');
-
 import { modal } from './components/modal/modal';
 
+export const body = document.querySelector('.body');
 const burgerMenu = document.getElementById('header__burger-menu');
 const asideMenu = document.querySelector('.aside-menu');
 const asideMenuCloseButton = document.querySelector(
@@ -17,10 +16,12 @@ const asideMenuCloseButton = document.querySelector(
 
 export function closeAsideMenu() {
   asideMenu.classList.remove('aside-menu--open');
+  body.classList.remove('body--no-scroll');
 }
 
 burgerMenu.addEventListener('click', function () {
   asideMenu.classList.add('aside-menu--open');
+  body.classList.add('body--no-scroll');
 });
 
 asideMenuCloseButton.addEventListener('click', function () {
